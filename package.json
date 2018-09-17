@@ -1,0 +1,43 @@
+{
+  "name": "react-native-basics-firebase",
+  "version": "0.0.1-alpha.1",
+  "description": "Helpers on working with Firebase products",
+  "author": "Evgeniy Kirichok <evgeniy.kirichok@gmail.com>",
+  "license": "Apache-2.0",
+  "private": false,
+  "keywords": [
+    "android",
+    "ios",
+    "react",
+    "native",
+    "react-native",
+    "native-modules",
+    "react-component",
+    "firebase"
+  ],
+  "main": "index.js",
+  "homepage": "https://github.com/kirichok/react-native-basics-firebase#readme",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirichok/react-native-basics-firebase.git"
+  },
+  "peerDependencies": {
+    "lodash": "^4.17.10",
+    "react": "^16.4.1",
+    "react-native": "^0.56.0",
+    "react-native-firebase": "^4.3.8"
+  },
+  "devDependencies": {
+    "react": "16.4.1",
+    "react-native": "0.56.0",
+    "react-native-firebase": "^4.3.8",
+    "babel-jest": "23.4.2",
+    "babel-preset-react-native": "5.0.0",
+    "jest": "23.4.2",
+    "react-test-renderer": "16.4.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
