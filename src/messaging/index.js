@@ -1,5 +1,6 @@
 import firebase from 'react-native-firebase';
 import EventEmitter from 'events';
+import {Vibration} from 'react-native';
 
 const EVENT_ON_TOKEN = 'firebase-on-token',
     EVENT_ON_NOTIFICATION = 'firebase-on-notification';
@@ -18,6 +19,7 @@ class Messaging {
         this.removeListener = this.removeListener.bind(this);
         this.removeNotificationListener = this.removeNotificationListener.bind(this);
         this.removeTokenListener = this.removeTokenListener.bind(this);
+        this.clearBadge = this.clearBadge.bind(this);
 
         this.init();
     }
@@ -48,6 +50,10 @@ class Messaging {
         listeners.onNotification = null;
         this.listeners.splice(id - 1, 1);
     };
+
+    clearBadge() {
+        return firebase.notifications().setBadge(0);
+    }
 
     addNotificationListener(handle) {
         if (this._initialNotification) {
@@ -125,7 +131,12 @@ class Messaging {
 
         if (!this._emiter.listenerCount(EVENT_ON_NOTIFICATION)) {
             this._initialNotification = notification;
+            return
         }
+        if (isPressed) {
+            return
+        }
+        Vibration.vibrate([0, 500]);
     }
 }
 

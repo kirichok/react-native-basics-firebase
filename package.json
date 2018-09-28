@@ -1,6 +1,6 @@
 {
   "name": "react-native-basics-firebase",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1-alpha.2",
   "description": "Helpers on working with Firebase products",
   "author": "Evgeniy Kirichok <evgeniy.kirichok@gmail.com>",
   "license": "Apache-2.0",
